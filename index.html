@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes réseaux sociaux</title>
+  <meta name="description" content="Tous mes liens au même endroit" />
+  <meta name="theme-color" content="#111827" />
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --ring:#1f2937; }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0f172a 40%,#0b1020);color:var(--text);display:flex;min-height:100%;}
+    .wrap{max-width:720px;margin:0 auto;padding:32px 16px}
+    .card{background:rgba(17,24,39,.7);backdrop-filter:saturate(140%) blur(8px);border:1px solid #1f2937;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+    .avatar{width:72px;height:72px;border-radius:16px;border:1px solid var(--ring);background:#0b1020 url('silver2.png') center/cover no-repeat}
+    h1{font-size:1.6rem;line-height:1.2;margin:0}
+    .handle{color:var(--muted);font-size:.95rem;margin:2px 0 0}
+    .bio{color:var(--muted);margin:12px 0 20px}
+    .links{display:grid;gap:12px}
+    .btn{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;border:1px solid #1f2937;background:#0b1020;text-decoration:none;color:var(--text);transition:transform .05s ease, background .2s ease, border-color .2s ease}
+    .btn:hover{transform:translateY(-1px);border-color:#334155}
+    .btn:active{transform:translateY(0)}
+    .icon{width:22px;height:22px;display:inline-block}
+    footer{margin-top:20px;text-align:center;color:#6b7280;font-size:.85rem}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <header>
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Silver Bullet</h1>
+          <p class="handle">@SilverB_YTD</p>
+        </div>
+      </header>
+      <p class="bio">Bienvenue ! Retrouvez tous mes liens ci‑dessous 👇</p>
+
+      <nav class="links">
+        <a class="btn" href="https://www.twitch.tv/silver4bullet" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">🟪</span>
+          <span>TWITCH</span>
+        </a>
+        <a class="btn" href="https://www.youtube.com/@ZoulmanShow" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">🎬</span>
+          <span>YOUTUBE</span>
+        </a>
+        <a class="btn" href="https://x.com/SilverB_YTD" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">🐦</span>
+          <span>X</span>
+        </a>
+        <a class="btn" href="https://www.instagram.com/silver_bullet.yui/" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">📸</span>
+          <span>Instagram</span>
+        </a>
+      </nav>
+
+      <footer>© <span id="year"></span> — Tous droits réservés</footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
